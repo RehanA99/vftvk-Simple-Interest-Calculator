@@ -8,10 +8,12 @@ function compute()
 
 	var year = new Date().getFullYear() + parseInt(years) ;
 //alert( "Principal : " + principal + "; Rate : " + rate + "; No. of Years : " + years + "; Interest : " + interest ) ;
-
+	
+	
 	if( principal <= 0 ) {
 		alert("Enter a positive number") ;
-		principal.focus() ;
+		document.getElementById("result").innerHTML = " " ;
+		document.getElementById("principal").focus() ;
 		return false ;
 	} else {
 		document.getElementById("result").innerHTML = "If you deposite \<mark>" + principal + "\</mark>,\<br\>at an interest rate of \<mark>" + rate + "%\</mark>.\<br\>You will receive an amount of \<mark>" + interest + "\</mark>,\<br\>in the year \<mark>" + year + "\</mark>" ;
